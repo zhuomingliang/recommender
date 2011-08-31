@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/servlet-api.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/jasper.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/jsp-api.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/el-api.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/annotations-api.jar"/>
+	<classpathentry kind="src" path="jrs/WEB-INF/src"/>
+	<classpathentry kind="src" output="work" path="work"/>
+	<classpathentry kind="lib" path="/home/jimmy/apache-tomcat-6.0.33/lib/postgresql-9.1dev-900.jdbc4.jar"/>
+	<classpathentry kind="output" path="jrs/WEB-INF/classes"/>
+</classpath>

@@ -1,9 +1,6 @@
 package com.jusco.taste.jrs.model;
 
 public class Product {
-    public static final String ID = "id";
-    public static final String TITLE = "title";
-
     private int id;
     private String title;
 

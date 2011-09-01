@@ -18,7 +18,7 @@ public class DBUtil {
         try {
             if(connection != null && !connection.isClosed())
                 return connection;
-            Class.forName("org.postgresql.Driver").newInstance();
+            //Class.forName("org.postgresql.Driver").newInstance();
             Context c = new InitialContext();
             String host = (String)c.lookup("java:comp/env/jdbc/host");
             String user = (String)c.lookup("java:comp/env/jdbc/user");
@@ -32,12 +32,12 @@ public class DBUtil {
             e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+       // } catch (InstantiationException e) {
+        //    e.printStackTrace();
+       // } catch (IllegalAccessException e) {
+       //     e.printStackTrace();
+        //} catch (ClassNotFoundException e) {
+        //    e.printStackTrace();
         }
 
         return connection;

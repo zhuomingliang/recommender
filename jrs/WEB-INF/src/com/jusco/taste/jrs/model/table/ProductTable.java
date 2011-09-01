@@ -35,22 +35,17 @@ public class ProductTable {
                     products.add(product);
                 }
             }
+            rs.close();
+            pstmt.close();
+           // conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-                try {
-                    rs.close();
-                    pstmt.close();
-                    conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
         }
         return products;
     }
 
     public static Map<String, Product> getProductMap(Collection<String> ids){
-        Map<String, Product> movies = new HashMap<String, Product>();
+        Map<String, Product> products = new HashMap<String, Product>();
         String idString = StringUtil.connectString(ids, ", ");
 
         String sql = "SELECT * FROM `product` WHERE `id` IN ( " + idString + " )";
@@ -66,24 +61,19 @@ public class ProductTable {
             while (rs.next()) {
                 Product product = new Product(rs.getInt("id"), rs.getString("title"));
                 if(product != null){
-                    movies.put(String.valueOf(product.getId()), product);
+                    products.put(String.valueOf(product.getId()), product);
                 }
             }
+            rs.close();
+            pstmt.close();
+            //conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-                try {
-                    rs.close();
-                    pstmt.close();
-                    //conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
         }
-        return movies;
+        return products;
     }
 
-    public static List<Product> getAllMovies(){
+    public static List<Product> getAllProducts(){
         List<Product> products = new ArrayList<Product>();
 
         String sql = "SELECT * FROM `products`";
@@ -101,17 +91,13 @@ public class ProductTable {
                     products.add(product);
                 }
             }
+            rs.close();
+            pstmt.close();
+            //conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-                try {
-                    rs.close();
-                    pstmt.close();
-                    //conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
         }
+
         return products;
     }
 

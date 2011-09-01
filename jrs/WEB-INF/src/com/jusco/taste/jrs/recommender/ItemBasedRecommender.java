@@ -16,17 +16,16 @@ import org.apache.mahout.cf.taste.recommender.Recommender;
 import org.apache.mahout.cf.taste.recommender.Rescorer;
 import org.apache.mahout.cf.taste.similarity.ItemSimilarity;
 
-import com.ibm.taste.example.movie.model.table.MovieSimilarityTable;
 
 public class ItemBasedRecommender {
       private final Recommender recommender;
 
       public ItemBasedRecommender() throws IOException, TasteException {
-          this(new MovieDataModel());
+          this(new ProductDataModel());
       }
 
       public ItemBasedRecommender(DataModel dataModel) throws TasteException {
-          Collection<GenericItemSimilarity.ItemItemSimilarity> correlations = MovieSimilarityTable.getAllMovieSimilarities();
+          Collection<GenericItemSimilarity.ItemItemSimilarity> correlations = ProductSimilarityTable.getAllProductSimilarities();
           ItemSimilarity itemSimilarity = new GenericItemSimilarity(correlations);
           recommender = new CachingRecommender(new EmbededItemBasedRecommender(new GenericItemBasedRecommender(dataModel, itemSimilarity)));
       }
@@ -69,7 +68,7 @@ public class ItemBasedRecommender {
 
 
       public String toString() {
-        return "MovieRecommender[recommender:" + recommender + ']';
+        return "ProductRecommender[recommender:" + recommender + ']';
       }
 
       private static final class EmbededItemBasedRecommender implements Recommender {

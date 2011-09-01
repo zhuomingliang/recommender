@@ -9,7 +9,7 @@ import com.jusco.taste.jrs.utils.DBUtil;
 public class ProductDataModel extends PostgreSQLJDBCDataModel {
     public final static String PERFERENCETABLE = "ratings";
     public final static String USERID_COLUMN = "userID";
-    public final static String ITEMID_COLUMN = "movieID";
+    public final static String ITEMID_COLUMN = "productID";
     public final static String PERFERENCE_COLUMN = "preference";
 
 

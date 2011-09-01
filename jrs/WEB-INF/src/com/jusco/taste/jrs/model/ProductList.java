@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ProductList {
-    public static final String MOVIE = "movie";
-    public static final String VALUE = "score";
 
     private Map<Product, Float> products = new HashMap<Product, Float>();
 
@@ -32,7 +30,7 @@ public class ProductList {
             } else {
                 flag = true;
             }
-            sb.append("{'movie':" + item.getKey().toJSON() + ", ");
+            sb.append("{'product':" + item.getKey().toJSON() + ", ");
             sb.append("'score':" + item.getValue() + "}");
 
         }

@@ -25,14 +25,14 @@ public class RecommendProduct {
 
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append("Movie:\t" + product.toString() + "\t");
+        sb.append("Product:\t" + product.toString() + "\t");
         sb.append("Score:\t" + value);
         return sb.toString();
     }
 
     public String toJSON(){
         StringBuilder sb = new StringBuilder();
-        sb.append("{'movie':" + product.toJSON() + ",");
+        sb.append("{'product':" + product.toJSON() + ",");
         sb.append("'score':" + value + "}");
         return sb.toString();
     }

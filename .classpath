@@ -9,5 +9,6 @@
 	<classpathentry kind="src" path="jrs/WEB-INF/src"/>
 	<classpathentry kind="src" output="work" path="work"/>
 	<classpathentry kind="lib" path="/home/jimmy/apache-tomcat-6.0.33/lib/postgresql-9.1dev-900.jdbc4.jar"/>
+	<classpathentry kind="lib" path="/home/jimmy/apache-tomcat-6.0.33/lib/mahout-core-0.5.jar"/>
 	<classpathentry kind="output" path="jrs/WEB-INF/classes"/>
 </classpath>

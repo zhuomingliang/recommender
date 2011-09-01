@@ -8,11 +8,8 @@ import java.sql.SQLException;
 import com.jusco.taste.jrs.model.User;
 import com.jusco.taste.jrs.utils.DBUtil;
 
+
 public class UserTable {
-
-    public static void insertUser(User user){
-
-    }
 
     public static User getUserByID(String id){
         String sql = "SELECT * FROM `users` WHERE `id` =  " + id;
